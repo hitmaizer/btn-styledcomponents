@@ -6,8 +6,10 @@ import Theme from "./theme/theme"
 export default function App(props){
     
     return (
-        <ThemeProvider theme={Theme}>
-            <Button>Default</Button>    
-        </ThemeProvider>
+        <div className="page__wrapper">
+            <ThemeProvider theme={Theme}>
+                <Button>Default</Button>    
+            </ThemeProvider>
+        </div>
     )
 }
