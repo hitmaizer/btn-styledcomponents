@@ -10,9 +10,52 @@
 .flex-row {
     display: flex;
     flex-direction: row;
+    gap: 32px;
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+}
+
+
+.btns__section {
+    padding: 32px;
+    margin: auto;
+    align-items: center;
+    place-items: flex-start;
+}
+
+.default__section {
+    padding: 16px;
+}
+
+
+
+.page__title {
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #4F4F4F;
+}
+
+.btn__title {
+    font-family: $ubunto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: #333333;
+}
+
+.page__footer {
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #A9A9A9;
 }
