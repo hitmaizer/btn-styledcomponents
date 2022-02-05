@@ -7,13 +7,18 @@ const Btn = styled.button`
       box-shadow: ${(props) => props.theme.dropShadow.dropShadow};
       font-family: ${(props) => props.theme.fonts.font};
       cursor: pointer;
-      padding: 8px 16px;
+      
 
       ${(props) => props.default && css `
         color: ${props.theme.colors.defaultText};
         &:hover, &:focus {
             background-color: ${props.theme.colors.defaultHover}
         }
+        
+        ${(props) => props.disableShadow && css `
+            box-shadow: none;
+        `}
+
       `}
       
       ${(props) => props.primary && css `
@@ -22,6 +27,11 @@ const Btn = styled.button`
         &:hover, &:focus {
             background-color: ${props.theme.colors.primaryHover};
         }
+        
+        ${(props) => props.disableShadow && css `
+            box-shadow: none;
+        `}
+
       `}
       
       ${(props) => props.secondary && css `
@@ -30,6 +40,11 @@ const Btn = styled.button`
         &:hover, &:focus {
             background-color: ${props.theme.colors.secondaryHover};
         }
+
+        ${(props) => props.disableShadow && css `
+            box-shadow: none;
+        `}
+
       `}
       
       ${(props) => props.danger && css `
@@ -38,7 +53,31 @@ const Btn = styled.button`
         &:hover, &:focus {
             background-color: ${props.theme.colors.dangerHover};
         }
+
+        ${(props) => props.disableShadow && css `
+            box-shadow: none;
+        `}
+
       `}
+      
+      ${(props) => props.disabled && css `
+        background-color: ${props.theme.colors.disabled};
+        color: ${props.theme.colors.disabledText};
+      `}
+      
+      ${(props) => props.lg && css `
+        padding: ${props.theme.sizes.lg}
+      `}
+      
+      ${(props) => props.md && css `
+        padding: ${props.theme.sizes.md}
+      `}
+      
+      ${(props) => props.sm && css `
+        padding: ${props.theme.sizes.sm}
+      `}
+      
+      
 
 
     `;
@@ -46,7 +85,7 @@ const Btn = styled.button`
 const Button = (props) => {
 
     return (
-        <Btn danger>{props.children}</Btn>
+        <Btn primary lg>{props.children}</Btn>
     )
 }
 
