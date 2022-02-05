@@ -2,24 +2,27 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const Btn = styled.button`
-      padding: ${(props) => (props.lg ? props.theme.sizes.lg : props.theme.sizes.md)};
-      background-color: ${(props) => props.theme.colors.primary};
       border: none;
       border-radius: 6px;
-      color: #fff;
-      text-transform: uppercase;
+      box-shadow: ${(props) => props.theme.dropShadow.dropShadow};
+      font-family: ${(props) => props.theme.fonts.font};
       cursor: pointer;
 
-      &:hover {
-          transform: translateY(-3%);
-          background-color: teal;
-      }
+      ${(props) => props.default && css `
+        padding: 8px 16px;
+        color: ${props.theme.colors.defaultText};
+        &:hover, &:focus {
+            background-color: ${props.theme.colors.defaultHover}
+        }
+      `}
+
+      
     `;
 
 const Button = (props) => {
 
     return (
-        <Btn>{props.children}</Btn>
+        <Btn default>{props.children}</Btn>
     )
 }
 
