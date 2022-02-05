@@ -1,15 +1,7 @@
 import React from 'react';
 import Btn from "../elements/ButtonStyled";
-import styled from 'styled-components';
 import Icon from "../elements/Icon"
 
-
-const WrapperAroundIconsAndText = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-`; 
 
 const btnCodeTxt = ["<Button />", 
 "&:hover, &:focus",
@@ -25,7 +17,7 @@ const btnCodeTxt = ["<Button />",
 "<Button size=”lg” />",
 "<Button color=”default” />",
 "<Button color=”primary” />",
-"<Button color=”primary” />",
+"<Button color=”secondary” />",
 "<Button color=”danger” />"
 ]
 

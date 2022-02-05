@@ -1,5 +1,5 @@
 
-export default {
+const theme = {
 
     colors: {
         default: "#E0E0E0",
@@ -35,3 +35,5 @@ export default {
 
 
 }
+
+export default theme
