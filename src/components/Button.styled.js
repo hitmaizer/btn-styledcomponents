@@ -7,22 +7,46 @@ const Btn = styled.button`
       box-shadow: ${(props) => props.theme.dropShadow.dropShadow};
       font-family: ${(props) => props.theme.fonts.font};
       cursor: pointer;
+      padding: 8px 16px;
 
       ${(props) => props.default && css `
-        padding: 8px 16px;
         color: ${props.theme.colors.defaultText};
         &:hover, &:focus {
             background-color: ${props.theme.colors.defaultHover}
         }
       `}
-
       
+      ${(props) => props.primary && css `
+        background-color: ${props.theme.colors.primary};
+        color: #fff;
+        &:hover, &:focus {
+            background-color: ${props.theme.colors.primaryHover};
+        }
+      `}
+      
+      ${(props) => props.secondary && css `
+        background-color: ${props.theme.colors.secondary};
+        color: #fff;
+        &:hover, &:focus {
+            background-color: ${props.theme.colors.secondaryHover};
+        }
+      `}
+      
+      ${(props) => props.danger && css `
+        background-color: ${props.theme.colors.danger};
+        color: #fff;
+        &:hover, &:focus {
+            background-color: ${props.theme.colors.dangerHover};
+        }
+      `}
+
+
     `;
 
 const Button = (props) => {
 
     return (
-        <Btn default>{props.children}</Btn>
+        <Btn danger>{props.children}</Btn>
     )
 }
 
