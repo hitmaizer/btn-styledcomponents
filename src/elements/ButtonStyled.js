@@ -104,6 +104,10 @@ export default styled.button`
       ${(props) => props.disabled && css `
         background-color: ${props.theme.colors.disabled};
         color: ${props.theme.colors.disabledText};
+        &:hover {
+            background-color: ${props.theme.colors.disabled};
+            color: ${props.theme.colors.disabledText};
+        }
       `}
       
 
