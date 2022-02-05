@@ -1,9 +1,16 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
+
+
+
+
 
 export default styled.button`
       // comum a todos
       border: none;
       border-radius: 6px;
+      font-size: 24px;
+      
       box-shadow: ${(props) => props.theme.dropShadow.dropShadow};
       font-family: ${(props) => props.theme.fonts.font};
       cursor: pointer;
