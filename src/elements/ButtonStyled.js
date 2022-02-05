@@ -10,8 +10,11 @@ export default styled.button`
       border: none;
       border-radius: 6px;
       font-size: 24px;
+      max-width: 165px;
+      width: auto;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       box-shadow: ${(props) => props.theme.dropShadow.dropShadow};
       font-family: ${(props) => props.theme.fonts.font};
@@ -33,7 +36,27 @@ export default styled.button`
             border: 2px solid ${props.theme.colors.defaultText};
             color: ${props.theme.colors.defaultText};
         `}
-
+        
+        ${(props) => props.text && css `
+            background-color: transparent;
+            border: none;
+            color: ${props.theme.colors.defaultText};
+            box-shadow: none;
+            &:hover {
+                border: 2px solid ${props.theme.colors.defaultText};
+            }
+        `}
+        
+        ${(props) => props.textdisabled && css `
+        background-color: transparent;
+        color: ${props.theme.colors.disabledText};
+        box-shadow: none;
+        &:hover {
+            background-color: transparent;
+            border: none;
+            color: ${props.theme.colors.disabledText};
+        }
+      `}
 
       `}
       
@@ -54,6 +77,17 @@ export default styled.button`
             border: 2px solid ${props.theme.colors.primary};
             color: ${props.theme.colors.primary};
             &:hover {
+                background-color: ${props.theme.colors.outlinePrimaryHover};
+            }
+        `}
+
+        ${(props) => props.text && css `
+            background-color: transparent;
+            border: none;
+            color: ${props.theme.colors.primary};
+            box-shadow: none;
+            &:hover {
+                border: 2px solid ${props.theme.colors.primary};
                 background-color: ${props.theme.colors.outlinePrimaryHover};
             }
         `}
@@ -83,6 +117,18 @@ export default styled.button`
             }
         `}
 
+        ${(props) => props.text && css `
+            background-color: transparent;
+            border: none;
+            color: ${props.theme.colors.secondary};
+            box-shadow: none;
+            &:hover {
+                border: 2px solid ${props.theme.colors.secondary};
+                background-color: ${props.theme.colors.secondary};
+                color: white;
+            }
+        `}
+
       `}
       
       //danger
@@ -104,6 +150,18 @@ export default styled.button`
             &:hover {
                 color: white;
                 background-color: ${props.theme.colors.danger};
+            }
+        `}
+
+        ${(props) => props.text && css `
+            background-color: transparent;
+            border: none;
+            color: ${props.theme.colors.danger};
+            box-shadow: none;
+            &:hover {
+                border: 2px solid ${props.theme.colors.danger};
+                background-color: ${props.theme.colors.danger};
+                color: white;
             }
         `}
 
