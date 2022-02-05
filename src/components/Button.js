@@ -1,7 +1,8 @@
 import React from 'react';
 import Btn from "../elements/ButtonStyled";
 import styled from 'styled-components';
-import { LocalGroceryStore } from '@styled-icons/material';
+import Icon from "../elements/Icon";
+
 
 const WrapperAroundIconsAndText = styled.div`
     display: flex;
@@ -10,17 +11,17 @@ const WrapperAroundIconsAndText = styled.div`
     justify-content: center;
 `; 
 
-const icon = <LocalGroceryStore size="24px" color="#fff" className="btn__icon"/>
+
 
 const Button = (props) => {
 
     return (
         <WrapperAroundIconsAndText>
             <Btn secondary lg>
-                {icon}
+                <Icon />
                 {props.children} 
+                <Icon />
             </Btn>
-            
         </WrapperAroundIconsAndText>
     )
 }
