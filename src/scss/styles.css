@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+Display:wght@500&family=Poppins:wght@500&family=Ubuntu+Mono:ital@1&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,6 +17,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  gap: 32px;
 }
 
 .flex-col {
@@ -26,4 +28,45 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 8px;
+}
+
+.btns__section {
+  padding: 32px;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  place-items: flex-start;
+}
+
+.default__section {
+  padding: 16px;
+}
+
+.page__title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #4F4F4F;
+}
+
+.btn__title {
+  font-family: "Ubuntu Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.page__footer {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A9A9A9;
 }
