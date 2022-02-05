@@ -7,14 +7,19 @@ const WrapperAroundIconsAndText = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 `; 
+
+const icon = <LocalGroceryStore size="24px" color="#fff" className="btn__icon"/>
 
 const Button = (props) => {
 
     return (
         <WrapperAroundIconsAndText>
-            <Btn primary lg>{props.children} <LocalGroceryStore size="24px" color="#fff" /></Btn>
-            
+            <Btn secondary lg>
+                {icon}
+                {props.children} 
+            </Btn>
             
         </WrapperAroundIconsAndText>
     )
