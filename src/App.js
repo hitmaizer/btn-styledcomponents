@@ -7,7 +7,7 @@ export default function App(props){
     
     return (
         <ThemeProvider theme={Theme}>
-            <Button lg={(props) => props.theme.sizes.lg}>click me!</Button>    
+            <Button>Default</Button>    
         </ThemeProvider>
     )
 }
