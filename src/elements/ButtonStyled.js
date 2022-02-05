@@ -10,7 +10,9 @@ export default styled.button`
       border: none;
       border-radius: 6px;
       font-size: 24px;
-      
+      display: flex;
+      align-items: center;
+      gap: 8px;
       box-shadow: ${(props) => props.theme.dropShadow.dropShadow};
       font-family: ${(props) => props.theme.fonts.font};
       cursor: pointer;
@@ -137,3 +139,5 @@ export default styled.button`
 
 
     `;
+
+    
