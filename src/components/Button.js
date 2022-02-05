@@ -5,7 +5,7 @@ import Btn from "../elements/ButtonStyled"
 const Button = (props) => {
 
     return (
-        <Btn danger lg outline>{props.children}</Btn>
+        <Btn primary lg>{props.children}</Btn>
     )
 }
 
