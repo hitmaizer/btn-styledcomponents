@@ -32,7 +32,7 @@ const btnCodeTxt = ["<Button />",
 const Buttons = (props) => {
 
     return (
-        <div className="btns__section">
+        <div className="btns__section flex-col">
             <h1 className="page__title">Buttons</h1>
                     <div className="default__section flex-row">
                         <div className="card__btn flex-col">
@@ -110,7 +110,7 @@ const Buttons = (props) => {
                             <Btn danger lg>Default</Btn>
                         </div>
                     </div>
-    
+            <footer className="page__footer">created by <u><b>Jose Alves</b></u> - devChallenges.io</footer>    
         </div>
     )
 }
