@@ -19,7 +19,7 @@ export default {
 
     dropShadow: {
         
-        dropShadow: "rgba(51, 51, 51, 0.2)",
+        dropShadow: "0px 2px 3px rgba(51, 51, 51, 0.2)",
     },
 
     sizes: {
@@ -27,6 +27,10 @@ export default {
         md: "8px 16px",
         lg: "12px 24px"
 
+    },
+
+    fonts: {
+        font: "'Noto Sans Display', sans-serif"
     }
 
 
