@@ -4,6 +4,6 @@ import Button from "./components/Button.styled"
 export default function App(){
     
     return (
-        <Button>click me!</Button>    
+        <Button primary>click me!</Button>    
     )
 }
