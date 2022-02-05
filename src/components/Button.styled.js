@@ -1,13 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-export default function Button(props) {
-
-    const Button = styled.button`
-      padding: 1em 2em;
-      background-color: ${props.primary ? "blue" : "red"};
+const Btn = styled.button`
+      padding: ${(props) => (props.lg ? props.theme.sizes.lg : props.theme.sizes.md)};
+      background-color: ${(props) => props.theme.colors.primary};
       border: none;
-      border-radius: 12px;
+      border-radius: 6px;
       color: #fff;
       text-transform: uppercase;
       cursor: pointer;
@@ -16,10 +14,13 @@ export default function Button(props) {
           transform: translateY(-3%);
           background-color: teal;
       }
-
     `;
 
+const Button = (props) => {
+
     return (
-        <Button>{props.children}</Button>
+        <Btn>{props.children}</Btn>
     )
 }
+
+export default Button;
